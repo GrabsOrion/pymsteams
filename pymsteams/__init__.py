@@ -50,6 +50,15 @@ class cardsection:
         if ititle:
             imobj["title"] = ititle
         self.payload["images"].append(imobj)
+        
+    def addHero(self, shero, ititle=None):
+       if "heroImage" not in self.payload.keys():
+            self.payload["heroImage"] = []
+        imobj = {}
+        imobj["image"] = simage
+        if ititle:
+            imobj["title"] = ititle
+        self.payload["heroImage"].append(imobj) 
 
 
     def text(self, stext):
